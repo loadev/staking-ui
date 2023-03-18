@@ -26,3 +26,16 @@ module.exports =
         // https://github.com/getsentry/sentry-webpack-plugin#options.
       })
     : nextConfig
+
+    module.exports = {
+
+      async redirects() {
+        return [
+          {
+            source: '/',
+            destination: '/liminality',
+            permanent: false
+          }
+        ];
+      }
+    };
